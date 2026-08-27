@@ -1,0 +1,69 @@
+project:
+  name: acopio-abierto
+  title: "Medición de rendimiento en centros de acopio de ayuda humanitaria"
+  language: es
+  country: CO
+  created: 2026-08-27
+  license_code: MIT
+  license_docs: CC-BY-4.0
+
+problem:
+  statement: >
+    La ayuda humanitaria en Colombia se mide en kilogramos donados y no en
+    capacidad nutricional entregada. No existe registro publico del flujo de
+    donaciones, por lo que no es posible evaluar el rendimiento de un centro
+    de acopio ni construir historico de desempeno.
+  unit_shift:
+    from: "toneladas recibidas"
+    to: "dias-persona de racion completa"
+
+evidence:
+  - id: E1
+    claim: "Campos de ayuda entregada vacios en los datos publicos de la UNGRD"
+    value: "98.0% (2019-2022, n=25857) y 99.7% (2023-2024, n=16036)"
+    source: "datos.gov.co wwkg-r6te y rgre-6ak4"
+  - id: E2
+    claim: "Latencia evento-activacion calculable en una fraccion minima"
+    value: "44 de 16036 registros (0.27%); 12% de los parseables con latencia negativa"
+    source: "datos.gov.co rgre-6ak4"
+  - id: E3
+    claim: "Serie publica de emergencias interrumpida"
+    value: "sin datos abiertos posteriores a diciembre de 2024"
+    source: "datos.gov.co"
+  - id: E4
+    claim: "Las plataformas ciudadanas describen acopios pero no registran flujo"
+    value: "Gravitas: needs_total/needs_cubiertas/needs_abierta en 0% de los registros"
+    source: "mapa.gravitasworld.com/api/snapshot"
+  - id: E5
+    claim: "La oferta de ayuda se concentra donde no esta el dano"
+    value: "96 reportes en ciudades no afectadas vs 13 en las afectadas"
+    source: "mapa.gravitasworld.com"
+
+model:
+  type: linear_programming
+  objective: "maximizar dias-persona de racion completa (D)"
+  stage_2: "maximizar masa despachada con D fijo en D*"
+  standard: "Esfera: 2100 kcal, >=10% energia en proteina, >=17% en grasa"
+  solver: PuLP + CBC
+  dual_use: "precios sombra como motor de peticion, con tope de cantidad"
+
+scope:
+  in:
+    - componente alimentos
+    - un acopio, un periodo, un destino
+  out:
+    - costo y transporte
+    - caducidad y dimension temporal
+    - demanda real por comunidad
+  hard_limit: >
+    D es capacidad de oferta, no cobertura de necesidad. El modelo dice cuantas
+    raciones se pueden armar, no cuantas hacen falta.
+
+phases:
+  F0: {name: "Validacion por entrevistas", start: 2026-08-27, end: 2026-09-19, status: in_progress}
+  F1: {name: "Instrumento minimo",         start: 2026-09-22, end: 2026-10-17, status: pending}
+  F2: {name: "Piloto en bodega real",      start: 2026-10-20, end: 2026-11-21, status: pending}
+  F3: {name: "Red de acopios (transbordo)",start: 2027-01-01, end: null,       status: pending}
+
+branches:
+  main: {purpose: "linea principal: investigacion, modelo y documentacion", created: 2026-08-27}
