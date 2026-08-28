@@ -4,41 +4,290 @@
   "created": "2026-08-27",
   "note": "Checklist autoritativo. No borrar ni reescribir entradas: solo actualizar el booleano 'passes'. Una feature pasa a true unicamente con verificacion end-to-end del criterio de aceptacion.",
   "features": [
-    {"id":"F0.1","phase":"F0","priority":1,"title":"Kit de contacto WhatsApp y correo","acceptance":"Plantillas en instrumentos/ revisadas, con secuencia de 4 contactos y reciprocidad anunciada por adelantado","passes":false,"note":"Declarado hecho por el operador; artefacto no incorporado al repositorio"},
-    {"id":"F0.2","phase":"F0","priority":1,"title":"Hoja de triage de entrevista","acceptance":"Guion en instrumentos/ con la pregunta de oro: que informacion necesitabas y no tenias","passes":false,"note":"Declarado hecho por el operador; artefacto no incorporado al repositorio"},
-    {"id":"F0.3","phase":"F0","priority":1,"title":"Derechos de peticion redactados","acceptance":"Cuatro peticiones (UNGRD, DANE, Contraloria, DNP) con numerales concretos y directorio de contactos verificado","passes":true},
-    {"id":"F0.4","phase":"F0","priority":1,"title":"Derechos de peticion radicados","acceptance":"Numero de radicado registrado para las cuatro entidades y fecha limite en calendario","passes":false},
-    {"id":"F0.5","phase":"F0","priority":1,"title":"Repositorio publico inicializado","acceptance":"Estructura GCC, ROADMAP, feature_list y protocolo de validacion accesibles por URL publica","passes":false,"note":"Estructura creada localmente; falta publicar en remoto"},
-    {"id":"F0.6","phase":"F0","priority":1,"title":"Protocolo de validacion publicado","acceptance":"docs/validacion-fase-0.md con preguntas, criterios y modos de falla del modelo","passes":true},
-    {"id":"F0.7","phase":"F0","priority":2,"title":"Lista de contactos de acopios","acceptance":"Minimo 15 acopios con responsable, canal y ciudad, priorizando zona afectada","passes":false},
-    {"id":"F0.8","phase":"F0","priority":2,"title":"Entrevistas realizadas","acceptance":"Entre 5 y 8 entrevistas transcritas y anonimizadas","passes":false},
-    {"id":"F0.9","phase":"F0","priority":2,"title":"Artefactos de registro recolectados","acceptance":"Al menos 3 formatos reales de registro de acopio, en blanco o anonimizados","passes":false},
-    {"id":"F0.10","phase":"F0","priority":2,"title":"Entrevista a plataforma existente","acceptance":"Conversacion con el equipo de Gravitas sobre por que falla la captura","passes":false},
-    {"id":"F0.11","phase":"F0","priority":3,"title":"Sintesis de hallazgos de campo","acceptance":"Documento con supuestos confirmados, refutados y parametros a recalibrar","passes":false},
-    {"id":"F0.12","phase":"F0","priority":3,"title":"Devolucion a participantes","acceptance":"Hojas entregadas a cada entrevistado y solicitud de critica agendada a 2 semanas","passes":false},
-
-    {"id":"R1.1","phase":"F0","priority":1,"title":"Plan de investigacion y alcance","acceptance":"Documento con lineas de investigacion, brecha central y criterio de exito","passes":true},
-    {"id":"R1.2","phase":"F0","priority":1,"title":"Auditoria de sistemas del SNGRD","acceptance":"Matriz de sistemas con granularidad, publicidad y consumibilidad por maquina","passes":true},
-    {"id":"R1.3","phase":"F0","priority":1,"title":"Indicador de latencia y calidad del dato","acceptance":"Calculo reproducible via API publica con evaluacion honesta de precision","passes":true},
-    {"id":"R1.4","phase":"F0","priority":2,"title":"Inventario de datos del sismo 2026","acceptance":"Fuentes de dano y necesidades verificadas, con marco de afirmaciones defendibles","passes":true},
-    {"id":"R1.5","phase":"F0","priority":2,"title":"Auditoria competitiva de Gravitas","acceptance":"Modelo de datos, campos vacios y sesgo geografico documentados con API publica","passes":true},
-    {"id":"R1.6","phase":"F0","priority":3,"title":"Auditoria de plataformas restantes","acceptance":"Contemos, Economia Para la Pipol, mapadelterremoto, SOS Colombia, Elsah","passes":false},
-
-    {"id":"M1.1","phase":"F0","priority":1,"title":"Especificacion de metricas de rendimiento","acceptance":"M1 a M6 definidas y derivables del libro mayor minimo","passes":true},
-    {"id":"M1.2","phase":"F0","priority":1,"title":"Formulacion del modelo de ensamblaje","acceptance":"LP con adecuacion, disponibilidad y aceptabilidad; dual interpretado; premisas clasificadas","passes":true},
-    {"id":"M1.3","phase":"F0","priority":1,"title":"Verificacion numerica del dual","acceptance":"Precios sombra por dualidad coinciden con perturbacion directa del inventario","passes":true},
-
-    {"id":"F1.1","phase":"F1","priority":1,"title":"Tabla de composicion de alimentos","acceptance":"25 a 30 items reales del circuito colombiano con fuente ICBF citada por fila","passes":false},
-    {"id":"F1.2","phase":"F1","priority":1,"title":"Libro mayor minimo","acceptance":"Tres tablas (entrada, salida, merma) en papel y hoja de calculo, probadas por un voluntario en menos de 30 segundos por evento","passes":false},
-    {"id":"F1.3","phase":"F1","priority":1,"title":"Calibracion de topes de aceptabilidad","acceptance":"Parametro a_i sustentado con criterio nutricional y validado en campo","passes":false},
-    {"id":"F1.4","phase":"F1","priority":2,"title":"Motor de optimizacion","acceptance":"Servicio que recibe inventario y devuelve D, R, capacidad varada y pedido con tope","passes":false,"branch_required":true},
-    {"id":"F1.5","phase":"F1","priority":2,"title":"Capacidad de atender inventarios externos","acceptance":"Flujo end-to-end probado con un inventario real de terceros","passes":false},
-    {"id":"F1.6","phase":"F1","priority":2,"title":"Analisis de sensibilidad","acceptance":"Si mover a_i un 30 por ciento cambia el orden del pedido, el pedido no se publica","passes":false},
-    {"id":"F1.7","phase":"F1","priority":3,"title":"Ficha publica de acopio","acceptance":"Vista con objetivo, avance, pedido con tope, rendimiento, merma y permanencia","passes":false},
-
-    {"id":"F2.1","phase":"F2","priority":1,"title":"Piloto en bodega real","acceptance":"Un acopio lleva el libro mayor durante 4 semanas y produce M1 a M5","passes":false},
-    {"id":"F2.2","phase":"F2","priority":2,"title":"Contraste modelo contra realidad","acceptance":"Diferencia entre D predicho y raciones efectivamente armadas, con explicacion","passes":false},
-
-    {"id":"F3.1","phase":"F3","priority":1,"title":"Modelo de transbordo entre acopios","acceptance":"LP multi-bodega que propone intercambios y cuantifica la ganancia en raciones","passes":false,"branch_required":true}
+    {
+      "id": "F0.1",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Kit de contacto WhatsApp y correo",
+      "acceptance": "Plantillas en instrumentos/ revisadas, con secuencia de 4 contactos y reciprocidad anunciada por adelantado",
+      "passes": false,
+      "note": "Declarado hecho por el operador; artefacto no incorporado al repositorio"
+    },
+    {
+      "id": "F0.10",
+      "phase": "F0",
+      "priority": 2,
+      "title": "Entrevista a plataforma existente",
+      "acceptance": "Conversacion con el equipo de Gravitas sobre por que falla la captura",
+      "passes": false
+    },
+    {
+      "id": "F0.11",
+      "phase": "F0",
+      "priority": 3,
+      "title": "Sintesis de hallazgos de campo",
+      "acceptance": "Documento con supuestos confirmados, refutados y parametros a recalibrar",
+      "passes": false
+    },
+    {
+      "id": "F0.12",
+      "phase": "F0",
+      "priority": 3,
+      "title": "Devolucion a participantes",
+      "acceptance": "Hojas entregadas a cada entrevistado y solicitud de critica agendada a 2 semanas",
+      "passes": false
+    },
+    {
+      "id": "F0.13",
+      "phase": "F0",
+      "priority": 2,
+      "title": "Consulta a nutricionista sobre corte temporal",
+      "acceptance": "Respuesta documentada a: a partir de cuantas semanas de dependencia deja de ser defendible un modelo de solo macronutrientes",
+      "passes": false
+    },
+    {
+      "id": "F0.2",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Hoja de triage de entrevista",
+      "acceptance": "Guion en instrumentos/ con la pregunta de oro: que informacion necesitabas y no tenias",
+      "passes": false,
+      "note": "Declarado hecho por el operador; artefacto no incorporado al repositorio"
+    },
+    {
+      "id": "F0.3",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Derechos de peticion redactados",
+      "acceptance": "Cuatro peticiones (UNGRD, DANE, Contraloria, DNP) con numerales concretos y directorio de contactos verificado",
+      "passes": true
+    },
+    {
+      "id": "F0.4",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Derechos de peticion radicados",
+      "acceptance": "Numero de radicado registrado para las cuatro entidades y fecha limite en calendario",
+      "passes": false
+    },
+    {
+      "id": "F0.5",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Repositorio publico inicializado",
+      "acceptance": "Estructura GCC, ROADMAP, feature_list y protocolo de validacion accesibles por URL publica",
+      "passes": false,
+      "note": "Estructura creada localmente; falta publicar en remoto"
+    },
+    {
+      "id": "F0.6",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Protocolo de validacion publicado",
+      "acceptance": "docs/validacion-fase-0.md con preguntas, criterios y modos de falla del modelo",
+      "passes": true
+    },
+    {
+      "id": "F0.7",
+      "phase": "F0",
+      "priority": 2,
+      "title": "Lista de contactos de acopios",
+      "acceptance": "Minimo 15 acopios con responsable, canal y ciudad, priorizando zona afectada",
+      "passes": false
+    },
+    {
+      "id": "F0.8",
+      "phase": "F0",
+      "priority": 2,
+      "title": "Entrevistas realizadas",
+      "acceptance": "Entre 5 y 8 entrevistas transcritas y anonimizadas",
+      "passes": false
+    },
+    {
+      "id": "F0.9",
+      "phase": "F0",
+      "priority": 2,
+      "title": "Artefactos de registro recolectados",
+      "acceptance": "Al menos 3 formatos reales de registro de acopio, en blanco o anonimizados",
+      "passes": false
+    },
+    {
+      "id": "M1.1",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Especificacion de metricas de rendimiento",
+      "acceptance": "M1 a M6 definidas y derivables del libro mayor minimo",
+      "passes": true
+    },
+    {
+      "id": "M1.2",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Formulacion del modelo de ensamblaje",
+      "acceptance": "LP con adecuacion, disponibilidad y aceptabilidad; dual interpretado; premisas clasificadas",
+      "passes": true
+    },
+    {
+      "id": "M1.3",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Verificacion numerica del dual",
+      "acceptance": "Precios sombra por dualidad coinciden con perturbacion directa del inventario",
+      "passes": true
+    },
+    {
+      "id": "R1.1",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Plan de investigacion y alcance",
+      "acceptance": "Documento con lineas de investigacion, brecha central y criterio de exito",
+      "passes": true
+    },
+    {
+      "id": "R1.2",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Auditoria de sistemas del SNGRD",
+      "acceptance": "Matriz de sistemas con granularidad, publicidad y consumibilidad por maquina",
+      "passes": true
+    },
+    {
+      "id": "R1.3",
+      "phase": "F0",
+      "priority": 1,
+      "title": "Indicador de latencia y calidad del dato",
+      "acceptance": "Calculo reproducible via API publica con evaluacion honesta de precision",
+      "passes": true
+    },
+    {
+      "id": "R1.4",
+      "phase": "F0",
+      "priority": 2,
+      "title": "Inventario de datos del sismo 2026",
+      "acceptance": "Fuentes de dano y necesidades verificadas, con marco de afirmaciones defendibles",
+      "passes": true
+    },
+    {
+      "id": "R1.5",
+      "phase": "F0",
+      "priority": 2,
+      "title": "Auditoria competitiva de Gravitas",
+      "acceptance": "Modelo de datos, campos vacios y sesgo geografico documentados con API publica",
+      "passes": true
+    },
+    {
+      "id": "R1.6",
+      "phase": "F0",
+      "priority": 3,
+      "title": "Auditoria de plataformas restantes",
+      "acceptance": "Contemos, Economia Para la Pipol, mapadelterremoto, SOS Colombia, Elsah",
+      "passes": false
+    },
+    {
+      "id": "F1.1",
+      "phase": "F1",
+      "priority": 1,
+      "title": "Tabla de composicion de alimentos",
+      "acceptance": "25 a 30 items reales del circuito colombiano con fuente ICBF citada por fila",
+      "passes": false
+    },
+    {
+      "id": "F1.1b",
+      "phase": "F1",
+      "priority": 1,
+      "title": "Transcribir apendice 6 de Esfera",
+      "acceptance": "Los 22 requerimientos (energia, proteina, grasa y 19 micronutrientes) transcritos del PDF oficial con cita de pagina",
+      "passes": false
+    },
+    {
+      "id": "F1.2",
+      "phase": "F1",
+      "priority": 1,
+      "title": "Libro mayor minimo",
+      "acceptance": "Tres tablas (entrada, salida, merma) en papel y hoja de calculo, probadas por un voluntario en menos de 30 segundos por evento",
+      "passes": false
+    },
+    {
+      "id": "F1.3",
+      "phase": "F1",
+      "priority": 1,
+      "title": "Calibracion de topes de aceptabilidad",
+      "acceptance": "Parametro a_i sustentado con criterio nutricional y validado en campo",
+      "passes": false
+    },
+    {
+      "id": "F1.4",
+      "phase": "F1",
+      "priority": 2,
+      "title": "Motor de optimizacion",
+      "acceptance": "Servicio que recibe inventario y devuelve D, R, capacidad varada y pedido con tope",
+      "passes": false,
+      "branch_required": true
+    },
+    {
+      "id": "F1.5",
+      "phase": "F1",
+      "priority": 2,
+      "title": "Capacidad de atender inventarios externos",
+      "acceptance": "Flujo end-to-end probado con un inventario real de terceros",
+      "passes": false
+    },
+    {
+      "id": "F1.6",
+      "phase": "F1",
+      "priority": 2,
+      "title": "Analisis de sensibilidad",
+      "acceptance": "Si mover a_i un 30 por ciento cambia el orden del pedido, el pedido no se publica",
+      "passes": false
+    },
+    {
+      "id": "F1.7",
+      "phase": "F1",
+      "priority": 3,
+      "title": "Ficha publica de acopio",
+      "acceptance": "Vista con objetivo, avance, pedido con tope, rendimiento, merma y permanencia",
+      "passes": false
+    },
+    {
+      "id": "F1.8",
+      "phase": "F1",
+      "priority": 2,
+      "title": "Capa de diagnostico de micronutrientes",
+      "acceptance": "Cobertura por micronutriente calculada sobre la racion resultante y reportada con semaforo, sin restringir el LP",
+      "passes": false
+    },
+    {
+      "id": "F1.9",
+      "phase": "F1",
+      "priority": 3,
+      "title": "Documentar infactibilidad por vitamina C",
+      "acceptance": "Verificado y publicado que una canasta de productos secos donados no alcanza adecuacion de vitamina C a ningun volumen",
+      "passes": false
+    },
+    {
+      "id": "F2.1",
+      "phase": "F2",
+      "priority": 1,
+      "title": "Piloto en bodega real",
+      "acceptance": "Un acopio lleva el libro mayor durante 4 semanas y produce M1 a M5",
+      "passes": false
+    },
+    {
+      "id": "F2.2",
+      "phase": "F2",
+      "priority": 2,
+      "title": "Contraste modelo contra realidad",
+      "acceptance": "Diferencia entre D predicho y raciones efectivamente armadas, con explicacion",
+      "passes": false
+    },
+    {
+      "id": "F3.1",
+      "phase": "F3",
+      "priority": 1,
+      "title": "Modelo de transbordo entre acopios",
+      "acceptance": "LP multi-bodega que propone intercambios y cuantifica la ganancia en raciones",
+      "passes": false,
+      "branch_required": true
+    }
   ]
 }

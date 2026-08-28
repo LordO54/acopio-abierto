@@ -71,3 +71,13 @@ Traza de ejecución Observación–Pensamiento–Acción.
 **Pensamiento.** El documento declara un límite clínico del modelo —una canasta de secos puede marcar 100% de macronutrientes y producir escorbuto a las seis semanas—. Ese contenido debe leerse como advertencia técnica verificable, no como argumento a favor del proyecto, porque su valor está justamente en que acota lo que el modelo promete. El nombre 8.3 además rompe la convención de `docs/`.
 
 **Acción.** Renombrado a `docs/nutrientes-esfera.md` y filtrado al mismo registro impersonal. Verificado que las cuatro tareas que deriva (F1.1b, F1.8, F1.9, F0.13) ya existen en `feature_list.json`. Queda sin incorporar `instrumentos/HOJA-T~2.PDF`, también con nombre 8.3.
+
+---
+
+## OTA-008 · 2026-08-27
+
+**Observación.** La hoja de triage llegó al repositorio con nombre 8.3 (`HOJA-T~2.PDF`). Su contenido —extraído del stream del PDF— es una hoja de clasificación de donaciones para recepción, no el guion de entrevista que describe F0.2. Git además la clasificaba como texto (1.029 líneas en `numstat`) porque su stream de contenido está sin comprimir y no contiene bytes NUL en los primeros 8 KB.
+
+**Pensamiento.** Con `core.autocrlf=true` y el archivo tratado como texto, cualquier checkout habría reescrito los saltos de línea dentro del PDF y lo habría corrompido de forma silenciosa. El artefacto tampoco satisface F0.2: marcar esa feature como completada por su llegada reproduciría exactamente la patología documentada en las auditorías, un `passes` sin el artefacto que dice representar.
+
+**Acción.** Renombrado a `instrumentos/hoja-triage-donaciones.pdf`. Creado `.gitattributes` con `*.pdf binary` y verificado que `numstat` ahora reporta binario. F0.2 permanece en `false`, con la distinción anotada en `instrumentos/README.md`. Incorporados los cambios de `feature_list.json`: reformato a objetos multilínea y cuatro features nuevas —F0.13, F1.1b, F1.8, F1.9— derivadas del documento de nutrientes; sin entradas eliminadas ni booleanos alterados.

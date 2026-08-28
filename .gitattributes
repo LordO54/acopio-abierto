@@ -1,0 +1,6 @@
+# El PDF de triage tiene el stream de contenido sin comprimir y git lo
+# detecta como texto. Con core.autocrlf activo eso corrompe el archivo.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.xlsx binary
