@@ -125,7 +125,7 @@ Las dos reglas que hoy nadie aplica salen como consecuencia matemática, no como
 | A4 | Las normas de referencia son públicas y estables | Esfera: 2.100 kcal, ≥10% de la energía en proteína, ≥17% en grasa |
 | A5 | La donación ciudadana llega desbalanceada, no escasa | Literatura de *material convergence*; sesgo geográfico de Gravitas (96 reportes en ciudades no afectadas vs 13 en las afectadas) |
 
-**Consecuencia de A1–A3:** `q_i` no se puede obtener de ninguna fuente existente. El modelo obliga a crear el libro mayor. No es un requisito del modelo: es su aporte.
+**Consecuencia de A1–A3:** `q_i` no se puede obtener de ninguna fuente existente. El modelo obliga a crear el libro mayor.
 
 ### B. Supuestos del modelo — asunciones falsables
 
@@ -144,9 +144,9 @@ Las dos reglas que hoy nadie aplica salen como consecuencia matemática, no como
 | C1 | Micronutrientes y preferencia cultural específica | Ampliable agregando filas a `K`; no cambia la estructura |
 | C2 | Costo, transporte y capacidad de bodega | Otro problema, otro modelo. Mezclarlos ahora impide validar este |
 | C3 | Caducidad y dimensión temporal | El primer refinamiento necesario tras la validación en campo |
-| **C4** | **Demanda real por comunidad** | **`D` es capacidad de oferta, no cobertura de necesidad. El modelo dice cuántas raciones puedo armar, no cuántas hacen falta** |
+| **C4** | **Demanda real por comunidad** | **`D` es capacidad de oferta, no cobertura de necesidad. El modelo dice cuántas raciones se pueden armar, no cuántas hacen falta** |
 
-**C4 es la limitación que hay que declarar en voz alta.** No existe señal de demanda por comunidad en Colombia —eso es lo que estableció toda la investigación previa—. El modelo mide lo que el acopio hace con lo que tiene. No mide si eso alcanzó.
+**C4 es la limitación que hay que declarar en voz alta.** No existe señal de demanda por comunidad en Colombia, como estableció la investigación previa. El modelo mide lo que el acopio hace con lo que tiene. No mide si eso alcanzó.
 
 ---
 
@@ -244,11 +244,11 @@ Un acopio pasa de *"recibimos alimentos no perecederos"* a *"necesitamos 35 litr
 
 Si el acopio A tiene aceite con `λ = 0,35` y el acopio B lo tiene en `28,90`, mover ese aceite genera 28,5 raciones por kilo **sin una sola donación nueva**. Los precios sombra vuelven aritmética el intercambio entre bodegas.
 
-Es la extensión natural del modelo —un problema de transbordo— y es lo único que resuelve de verdad el patrón "todos mandaron arroz al mismo sitio". **Requiere que varios acopios lleven el libro mayor**, y por eso el registro, no el mapa, es el activo defendible.
+Es la extensión natural del modelo —un problema de transbordo— y es lo único que resuelve de verdad el patrón "todos mandaron arroz al mismo sitio". **Requiere que varios acopios lleven el libro mayor.**
 
 ### 5 · El histórico que hoy no existe
 
-Cada corrida deja `D`, `R`, merma, permanencia y precios sombra fechados. Al cabo de una emergencia hay una serie. Al cabo de tres, una base de evidencia sobre qué donaciones sirven — **exactamente lo que la investigación demostró que Colombia no tiene**.
+Cada corrida deja `D`, `R`, merma, permanencia y precios sombra fechados. Al cabo de una emergencia hay una serie. Al cabo de tres, una base de evidencia sobre qué donaciones sirven: **el tipo de registro que hoy no existe en Colombia**.
 
 ---
 

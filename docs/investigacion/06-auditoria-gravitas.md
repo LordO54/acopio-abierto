@@ -9,7 +9,7 @@
 
 ## Resumen
 
-Gravitas es lo más cercano que existe hoy al proyecto que quieres construir, y está mucho mejor diseñado de lo que su cobertura de prensa sugiere. **Pero reproduce, con siete días de vida, exactamente la misma patología que documentamos en la UNGRD: el modelo de datos correcto, completamente vacío.**
+Gravitas es la plataforma más cercana a un registro ciudadano de acopios que existe hoy en Colombia, y está mucho mejor diseñada de lo que su cobertura de prensa sugiere. **Pero reproduce, con siete días de vida, exactamente la misma patología documentada en la UNGRD: el modelo de datos correcto, completamente vacío.**
 
 Esto no es una crítica al equipo de Gravitas —hicieron en 42 horas lo que la institucionalidad no ha hecho en catorce años—. Es la evidencia más limpia disponible de que **el problema no es de software**.
 
@@ -46,7 +46,7 @@ department_id · department_name · department_priority · department_is_epicent
 
 Con `category_fields` anidado: `tipo`, `capacidad_actual`, `organizacion_responsable`, `contacto`, `necesita[]`.
 
-**Esto es un modelo de emparejamiento oferta–demanda.** `needs_total / needs_cubiertas / needs_abierta` es precisamente la capa 3 de nuestro proyecto: necesidad declarada, necesidad cubierta y brecha abierta. Alguien pensó bien el problema.
+**Esto es un modelo de emparejamiento oferta–demanda.** `needs_total / needs_cubiertas / needs_abierta` distingue necesidad declarada, necesidad cubierta y brecha abierta. Alguien pensó bien el problema.
 
 ---
 
@@ -121,35 +121,31 @@ Distribución territorial de los 198 reportes:
 
 **Bogotá, Medellín y Cartagena —ninguna afectada— concentran 96 reportes. Quibdó, Pereira y Manizales —las ciudades del desastre— suman 13.**
 
-En el subconjunto de la API que pude recuperar, `department_is_epicenter` es `false` en el 100% de los casos y **Chocó no aparece ni una vez**.
+En el subconjunto de la API recuperado, `department_is_epicenter` es `false` en el 100% de los casos y **Chocó no aparece ni una vez**.
 
-Gravitas no está mapeando dónde se necesita ayuda. **Está mapeando dónde hay gente con conexión, tiempo y ganas de ayudar.** Que es exactamente el fenómeno de la segunda ola, ahora medido en tiempo real y con nombre propio.
-
-> Esta es la mejor evidencia empírica que vas a conseguir para tu tesis, y es de esta semana. La oferta de ayuda se organiza sola en las ciudades ricas no afectadas; la demanda, en las zonas golpeadas, permanece invisible.
+Gravitas no está mapeando dónde se necesita ayuda. **Está mapeando dónde hay gente con conexión, tiempo y ganas de ayudar.** Es el fenómeno de la segunda ola medido en tiempo real: la oferta de ayuda se organiza sola en las ciudades ricas no afectadas, mientras la demanda, en las zonas golpeadas, permanece invisible.
 
 ---
 
-## 6. Qué significa para nuestro proyecto
+## 6. Qué significa para el proyecto
 
 ### Lo que confirma
 
-- **El diagnóstico es correcto y otros lo comparten.** No estás inventando un problema.
+- **El diagnóstico es compartido.** Otro equipo llegó por su cuenta al mismo planteamiento.
 - **El software no es el cuello de botella.** Gravitas construyó en 42 horas un modelo de datos mejor que el de la UNGRD. Sigue vacío.
 - **El cuello de botella es la captura en el punto de origen.** Nadie está parado en la puerta del acopio contando lo que entra.
 
 ### Lo que cambia
 
-Antes planteé tres capas: registro estandarizado, agregación, necesidad comunitaria. Gravitas ya ocupa las capas 2 y 3 —el mapa, la agregación, el modelo de necesidades— **y las tiene vacías por falta de la capa 1.**
-
-Eso convierte la capa 1 en lo único escaso. Y también convierte a Gravitas en **aliado natural, no en competencia**: ellos tienen el mapa y la API; nosotros podemos tener el dato que hoy les falta.
+Gravitas ya tiene el mapa, la agregación y el modelo de necesidades — **y los tiene vacíos por falta de registro en el punto de origen.** Eso deja ese registro como lo único escaso, y convierte a Gravitas en **aliado natural, no en competencia**: ellos tienen el mapa y la API; les falta el dato.
 
 ### Riesgo real
 
-Si Gravitas resuelve la captura antes que nosotros, el proyecto pierde su razón de ser. Tienen ventaja de tiempo, prensa, acceso donado a alcaldías y gobernaciones, y respaldo de ONU por su trabajo previo. **Pero llevan siete días con `needs_total` en cero, lo cual sugiere que la captura es difícil por razones que no son técnicas** — que es precisamente lo que la fase de campo debe averiguar.
+Si Gravitas resuelve la captura primero, el proyecto pierde su razón de ser. Tienen ventaja de tiempo, prensa, acceso donado a alcaldías y gobernaciones, y respaldo de ONU por su trabajo previo. **Pero llevan siete días con `needs_total` en cero, lo cual sugiere que la captura es difícil por razones que no son técnicas** — que es precisamente lo que la fase de campo debe averiguar.
 
 ### Recomendación
 
-**Contactar a Juan Camilo Garzón esta semana.** No para proponer sociedad todavía, sino para una entrevista: es el mejor informante posible sobre por qué la captura falla. Ha visto el problema desde adentro, en tiempo real, y su plataforma es la prueba documentada. Esa conversación vale más que cinco entrevistas de acopio.
+**Contactar al creador de Gravitas en el corto plazo.** No para proponer sociedad todavía, sino para una entrevista: es el mejor informante posible sobre por qué la captura falla. Ha visto el problema desde adentro, en tiempo real, y su plataforma es la prueba documentada. Esa conversación vale más que cinco entrevistas de acopio.
 
 Además, su API pública `/api/snapshot` es fuente de datos aprovechable ya mismo para monitorear la evolución de la respuesta ciudadana.
 

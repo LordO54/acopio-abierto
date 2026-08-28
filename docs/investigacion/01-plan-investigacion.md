@@ -9,10 +9,10 @@
 
 El 10 de agosto de 2026 un sismo de magnitud 7,4 con epicentro en San José del Palmar (Chocó) afectó **15 departamentos y 437 municipios**. Reportes de la UNGRD hasta el 14 de agosto: ~287 fallecidos, ~3.975 heridos, ~378 desaparecidos, 10.677 viviendas destruidas y 65.841 averiadas. Hay centros de acopio activos en todas las capitales y el Banco Mundial desembolsó USD 200 millones.
 
-Esto no es un proyecto académico. **La "segunda ola" está ocurriendo ahora mismo**, y eso implica tres cosas para la investigación:
+Este no es un ejercicio académico. **La "segunda ola" está ocurriendo ahora mismo**, y eso implica tres cosas para la investigación:
 
 1. Los datos de esta emergencia se están generando en este momento y son irrecuperables después. Registrar lo que está pasando en los acopios hoy vale más que reconstruir Mocoa 2017.
-2. Los actores que quieres entrevistar están saturados. Fase 0 debe ser extremadamente breve o esperar 3–4 semanas.
+2. Los actores a entrevistar están saturados. Fase 0 debe ser extremadamente breve o esperar 3–4 semanas.
 3. Existe una ventana política y de financiación abierta que no estará abierta en seis meses.
 
 ---
@@ -35,7 +35,7 @@ Marco: **Ley 1523 de 2012**, que crea el Sistema Nacional de Gestión del Riesgo
 
 - **CDGRD** — Consejos Departamentales de Gestión del Riesgo, presididos por el gobernador
 - **CMGRD** — Consejos Municipales, presididos por el alcalde
-- Son la unidad de decisión real sobre distribución local. **Aquí está tu interlocutor de Fase 0**, no en la UNGRD.
+- Son la unidad de decisión real sobre distribución local. **Aquí está el interlocutor de Fase 0**, no en la UNGRD.
 
 ### Operadores en terreno
 
@@ -49,14 +49,14 @@ Cruz Roja Colombiana · Defensa Civil Colombiana · Cuerpos de Bomberos · Fuerz
 
 ## 2. Sistemas y software que ya existen
 
-Esto es lo más importante que debes saber antes de construir nada: **buena parte de lo que imaginas ya fue diseñado. El problema no es que no exista software, es que no se usa, no se alimenta o no es público.**
+Este es el punto de partida obligado antes de construir nada: **buena parte de lo que se imaginaría como solución ya fue diseñado. El problema no es que no exista software, es que no se usa, no se alimenta o no es público.**
 
 | Sistema | Qué hace | Estado / limitación |
 |---|---|---|
-| **LSS/SUMA** (OPS/OMS) | Registro, clasificación, priorización e inventario de suministros humanitarios desde la oferta del donante hasta la distribución. Colombia lo adoptó formalmente por decreto ministerial | Diseñado en los 90. Centrado en **inventario**, no en **necesidad**. Requiere equipos entrenados desplegados. Su uso real en emergencias recientes es una pregunta abierta que debes verificar |
+| **LSS/SUMA** (OPS/OMS) | Registro, clasificación, priorización e inventario de suministros humanitarios desde la oferta del donante hasta la distribución. Colombia lo adoptó formalmente por decreto ministerial | Diseñado en los 90. Centrado en **inventario**, no en **necesidad**. Requiere equipos entrenados desplegados. Su uso real en emergencias recientes es una pregunta abierta pendiente de verificar |
 | **EDAN** | Evaluación de Daños y Análisis de Necesidades. Metodología oficial + formatos. Aplicativo web en `rud.gestiondelriesgo.gov.co` | Levantamiento lento, primero en papel. Resultados **no públicos**. Granularidad municipal, no comunitaria |
 | **RUD** | Registro Único de Damnificados. Creado por Decreto 4830 de 2010; DANE diseñó y procesó | Solo se activó a gran escala en la Ola Invernal 2010–11 (proyecto "REUNIDOS"). Identifica personas, no necesidades por bien |
-| **SNIGRD** | Nueva plataforma de la UNGRD lanzada en mayo de 2026: riesgos, emergencias históricas, inversión pública, maquinaria y capacidades, en tiempo real. `sni.gestiondelriesgo.gov.co` | **Recién lanzada — hay que auditarla directamente.** Es la fuente más prometedora y la menos explorada |
+| **SNIGRD** | Nueva plataforma de la UNGRD lanzada en mayo de 2026: riesgos, emergencias históricas, inversión pública, maquinaria y capacidades, en tiempo real. `sni.gestiondelriesgo.gov.co` | **Recién lanzada — requiere auditoría directa.** Es la fuente más prometedora y la menos explorada |
 | **DesInventar** | Base histórica de pérdidas y daños desde 1921 (~6.000 registros). LA RED + OSSO + UNISDR | Registra **efectos**, no respuesta. No dice qué se entregó ni si sirvió |
 | **Datos Abiertos** | Dataset "Emergencias UNGRD" en `datos.gov.co` | Eventos y afectación. Sin datos de ayuda entregada |
 | **4W de OCHA** | Quién hace qué, dónde y cuándo. Parte del SIDI. Publicado en HDX y Monitor OCHA | Rastrea **proyectos de organizaciones**, no necesidades de hogares. Cobertura sesgada al conflicto armado |
@@ -68,8 +68,6 @@ KoBoToolbox · ActivityInfo · Sahana Eden · RAMP (IFRC) · CommCare · Last Mi
 
 ## 3. ¿Existen datos históricos de eficacia? Respuesta corta: casi no
 
-Tu intuición es correcta y vale la pena decirlo explícitamente porque **es la justificación del proyecto**.
-
 ### Lo que sí existe
 
 - **Evaluación institucional y de resultados del SNGRD** — DNP/Sinergia, junio 2019. Evalúa diseño, coordinación horizontal y vertical, recursos y capacidad institucional a partir de la Ley 1523. Es el documento más cercano a una evaluación de desempeño sistémico.
@@ -77,7 +75,7 @@ Tu intuición es correcta y vale la pena decirlo explícitamente porque **es la 
 - **Valoración de daños y pérdidas de la Ola Invernal 2010–2011** (CEPAL/BID/DNP) y el sistema de consulta REUNIDOS del DANE.
 - **CONPES** 3318 (2004), 4058, 4135 — política y financiamiento.
 - Informes de OPS y Cruz Roja sobre Mocoa 2017 (lecciones aprendidas del sector salud).
-- Literatura académica sobre **"material convergence"** (Holguín-Veras et al.) — el fenómeno exacto que describe tu proyecto, con modelos de asignación de recursos y evidencia de que la mensajería a donantes reduce el flujo de bienes de baja prioridad.
+- Literatura académica sobre **"material convergence"** (Holguín-Veras et al.) — la saturación de los canales logísticos con bienes no solicitados tras un desastre, con modelos de asignación de recursos y evidencia de que la mensajería a donantes reduce el flujo de bienes de baja prioridad.
 
 ### Lo que NO existe (la brecha)
 
@@ -89,7 +87,7 @@ Ninguna fuente pública colombiana permite responder:
 - ¿Qué comunidades quedaron sin cobertura y cuáles recibieron entregas duplicadas?
 - ¿Qué necesitan específicamente hoy las comunidades afectadas?
 
-**La Contraloría mide legalidad fiscal, no eficacia logística.** Nadie en Colombia publica métricas de desempeño de la cadena de suministro humanitaria. Ese vacío es el proyecto.
+**La Contraloría mide legalidad fiscal, no eficacia logística.** Nadie en Colombia publica métricas de desempeño de la cadena de suministro humanitaria.
 
 ---
 
@@ -115,7 +113,7 @@ Ninguna fuente pública colombiana permite responder:
 3. Revisar HDX y Monitor OCHA Colombia para el sismo de agosto 2026.
 4. Probar acceso a `rud.gestiondelriesgo.gov.co`.
 
-**Entregable:** matriz de sistemas — qué dato produce cada uno, a qué granularidad, si es público, si es consumible por máquina. **Este documento por sí solo tiene valor publicable.**
+**Entregable:** matriz de sistemas — qué dato produce cada uno, a qué granularidad, si es público, si es consumible por máquina.
 
 ---
 
@@ -135,9 +133,9 @@ Cinco casos, mismo protocolo de análisis:
 
 ---
 
-### Línea 4 — Solicitud formal de datos (arranca YA, corre en paralelo)
+### Línea 4 — Solicitud formal de datos (arranca de inmediato, corre en paralelo)
 
-Esta es la palanca que probablemente no has usado y la de mayor retorno.
+Es la palanca de mayor retorno de todo el plan.
 
 **El derecho de petición** (art. 23 Constitución, Ley 1755/2015) obliga a toda entidad pública a responder en **15 días hábiles**. Es gratuito, no requiere abogado y se radica por correo electrónico.
 
@@ -153,12 +151,12 @@ Radicar a:
 
 ---
 
-### Línea 5 — Campo (tu Fase 0, reprogramada)
+### Línea 5 — Campo (Fase 0, reprogramada)
 
-Mantén el diseño que ya acordamos —WhatsApp para contacto, correo para agendar, artefactos durante la entrevista, hojas como reciprocidad anunciada por adelantado, crítica en un cuarto contacto— pero con dos ajustes por el contexto:
+Se mantiene el diseño previsto —WhatsApp para contacto, correo para agendar, artefactos durante la entrevista, hojas como reciprocidad anunciada por adelantado, crítica en un cuarto contacto— con dos ajustes por el contexto:
 
-- **Baja el objetivo de la primera ronda a 5–8 entrevistas.** La gente está en emergencia.
-- **Agrega una pregunta de oro:** *"¿qué información necesitabas hoy y no tenías?"* Contestada durante una emergencia real, esa respuesta vale más que todo el desk research.
+- **Bajar el objetivo de la primera ronda a 5–8 entrevistas.** La gente está en emergencia.
+- **Agregar una pregunta clave:** *"¿qué información necesitabas hoy y no tenías?"* Contestada durante una emergencia real, esa respuesta vale más que todo el desk research.
 
 ---
 
@@ -174,24 +172,24 @@ Un reemplazo de SUMA ni un sistema nacional de gestión de inventarios. Ese espa
 
 Concretamente, tres capas en orden de dificultad:
 
-1. **Capa de registro estandarizado** — las hojas que ya estás diseñando. Bajo costo, valor inmediato, es tu puerta de entrada a los acopios.
+1. **Capa de registro estandarizado** — las hojas de registro en diseño. Bajo costo, valor inmediato; es la puerta de entrada a los acopios.
 2. **Capa de agregación** — consolidar registros de múltiples acopios en una vista comparable. Aquí aparece el dato que hoy no existe.
 3. **Capa de necesidad comunitaria** — reporte desde la comunidad, no desde el acopio. Es lo más valioso y lo más difícil; requiere confianza construida en las capas 1 y 2.
 
-**Empieza y termina en la capa 1 para esta fase.** La capa 3 es la tesis; la capa 1 es lo que te da acceso y datos para defenderla.
+**Esta fase empieza y termina en la capa 1.** La capa 3 es la tesis; la capa 1 es lo que da acceso y datos para defenderla.
 
 ---
 
 ## 6. Criterio de éxito de la investigación
 
-La investigación está completa cuando puedas responder, con fuente citable:
+La investigación está completa cuando sea posible responder, con fuente citable:
 
 1. Qué entidad tiene el mandato legal de registrar donaciones, y con qué instrumento.
 2. Si ese instrumento se usó en las últimas cinco emergencias, sí o no.
 3. Qué métricas de desempeño logístico existen públicamente en Colombia (probable respuesta: ninguna) y con qué documento se prueba.
 4. Qué información dicen necesitar los coordinadores de acopio y no tienen.
 
-Con esas cuatro respuestas tienes marco, justificación, brecha y validación de usuario. Es suficiente para definir producto.
+Con esas cuatro respuestas hay marco, justificación, brecha y validación de usuario. Es suficiente para definir producto.
 
 ---
 

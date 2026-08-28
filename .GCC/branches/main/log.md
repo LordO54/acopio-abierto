@@ -51,3 +51,13 @@ Traza de ejecución Observación–Pensamiento–Acción.
 **Pensamiento.** Prometer capacidad inexistente es el riesgo reputacional más alto del lanzamiento. Si responden cinco organizaciones simultáneamente no se puede cumplir.
 
 **Acción.** Moderar la oferta a "estamos empezando y podemos tomar los primeros casos". Crear F1.5 para la capacidad real de atender inventarios externos.
+
+---
+
+## OTA-006 · 2026-08-27
+
+**Observación.** Los documentos de `docs/investigacion/` y las especificaciones de `docs/` conservaban marcas de su origen conversacional: segunda persona dirigida al autor ("tu proyecto", "lo que imaginas"), autocorrecciones narradas ("afirmé que…", bloque `⚠️ CORRECCIÓN`) y coletillas que interpretaban cada hallazgo en clave de justificación del proyecto ("Esa ausencia de tubería es el proyecto").
+
+**Pensamiento.** Estos documentos son la evidencia pública del repositorio y deben sostenerse ante un lector externo —una entidad que responda una petición, un evaluador, un periodista— que no conoce el plan interno. Las autocorrecciones narradas restan autoridad sin aportar el hallazgo; el hallazgo metodológico (dos grafías del centinela `fecha_activacion`) se conserva, la narración del error se elimina. El encuadre de producto vive en `README.md` y `docs/validacion-fase-0.md`, no en cada descripción.
+
+**Acción.** Reescritura de los seis documentos de investigación y de `metricas-de-rendimiento.md` y `modelo-ensamblaje-alimentario.md` a registro impersonal. Corregida la referencia rota a `06-indicador-latencia-y-calidad-datos.md` → `04-indicador-latencia.md` y eliminado el paso obsoleto "auditar el SNIGRD cuando haya navegador", ya ejecutado en la sección 1b. Las peticiones, `README.md` y `ROADMAP.md` se dejan intactas: su primera persona es la del peticionario y la del equipo, no un residuo.

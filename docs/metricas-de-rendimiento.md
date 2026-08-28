@@ -15,13 +15,11 @@ Hoy nadie puede contestarla, porque no existe ninguna definición operativa de "
 
 ---
 
-## 1. Corrección al ejemplo de dos alimentos
+## 1. El caso mínimo: dos alimentos
 
-Antes de construir sobre el modelo, hay que arreglar un paso. En el ejemplo del arroz y el aceite se afirma:
+Un acopio con 100 kg de arroz y 2 kg de aceite puede armar 65 raciones completas. La cuenta intuitiva dice que para esas 65 raciones bastan 33 kg de arroz y que sobran 67, porque solo mira la energía.
 
-> *"para esas 65 raciones solo necesitas 33 kg de arroz. Te sobran 67 kg."*
-
-**Es incorrecto**, y el error es instructivo. Los 33 kg salen de mirar solo la energía. Pero la grasa —que es la restricción activa— exige usar **todo** el arroz: sus 600 g de grasa hacen falta para llegar a los 2.600 g que requieren 65 raciones.
+Es incorrecto. La grasa —que es la restricción activa— exige usar **todo** el arroz: sus 600 g de grasa hacen falta para llegar a los 2.600 g que requieren 65 raciones.
 
 Resuelto como LP:
 
@@ -43,7 +41,7 @@ No sobra un gramo de masa. **El desperdicio existe, pero no es masa: es capacida
 
 Ciento quince días-persona de comida completa están inmovilizados por faltar cuatro kilos y medio de aceite. Eso cuesta menos de 60.000 pesos.
 
-**Ese es el argumento entero del proyecto en una sola cifra**, y es más fuerte que "sobra arroz". No es que la donación sea excesiva: es que está desbalanceada, y el faltante es barato y específico.
+La lectura correcta no es "sobra arroz". La donación no es excesiva: está desbalanceada, y el faltante es barato y específico.
 
 ### Sobre el rango de validez del precio sombra
 
@@ -56,7 +54,7 @@ Verificado numéricamente: el aceite vale 25 raciones/kg **solo hasta los 4,6 kg
 | +7,0 kg | 210 | 20,7 /kg |
 | +10,0 kg | 223 | 15,8 /kg |
 
-Un precio sombra **no es una constante, es una pendiente local**. Publicar "el aceite vale 25" sin decir "hasta 4,6 kg" produce sobrepedido — que es justamente la segunda ola, ahora causada por nuestro propio modelo. **Todo pedido debe llevar cantidad máxima, no solo prioridad.**
+Un precio sombra **no es una constante, es una pendiente local**. Publicar "el aceite vale 25" sin decir "hasta 4,6 kg" produce sobrepedido — la segunda ola otra vez, ahora provocada por el propio modelo. **Todo pedido debe llevar cantidad máxima, no solo prioridad.**
 
 ---
 
@@ -95,7 +93,7 @@ R  =  D_despachado  /  D_máximo_posible
 - `D_despachado`: días-persona de ración completa efectivamente enviados, calculados sobre las salidas.
 - `D_máximo_posible`: el óptimo del LP sobre todo lo que entró.
 
-Responde: **del potencial nutricional que cruzó mi puerta, ¿cuánto convertí en comida completa despachada?**
+Responde: **del potencial nutricional que entró por la puerta, ¿cuánto se convirtió en comida completa despachada?**
 
 Un acopio con R = 0,4 recibió mucho y convirtió poco. Uno con R = 0,9 operó cerca del límite de lo que su donación permitía. Es comparable entre acopios de tamaños distintos porque es un cociente.
 
@@ -113,7 +111,7 @@ Los 115 días-persona del ejemplo. Se reporta junto con **el pedido que la desbl
 Merma  =  masa descartada  /  masa recibida
 ```
 
-Desagregada por causal. **Es la medición directa de la segunda ola**, y hoy no existe en ninguna parte de Colombia — se lo preguntamos a la UNGRD en el numeral 7 de la petición precisamente porque nadie la lleva.
+Desagregada por causal. **Es la medición directa de la segunda ola**, y hoy no existe en ninguna parte de Colombia.
 
 ### M4 · Tiempo de permanencia
 
@@ -121,7 +119,7 @@ Desagregada por causal. **Es la medición directa de la segunda ola**, y hoy no 
 P  =  mediana(fecha_salida − fecha_entrada)
 ```
 
-Bajo supuesto PEPS. Es el mismo indicador de latencia que calculamos sobre los datos de la UNGRD, pero medible de verdad, porque ambas fechas las genera el propio acopio.
+Bajo supuesto PEPS. Es el mismo indicador de latencia calculado sobre los datos de la UNGRD, pero medible de verdad: ambas fechas las genera el propio acopio.
 
 ### M5 · Dispersión de destino
 
@@ -146,7 +144,7 @@ Hay que decirlo de frente, porque prometer más destruye la credibilidad del res
 | Duplicación entre acopios | Requiere la red, no el nodo |
 | Impacto en bienestar | Fuera de alcance de cualquier sistema logístico |
 
-**Un acopio puede medir la eficiencia de su conversión, no la eficacia de la ayuda.** Es una distinción incómoda y es correcta. Pasar de cero a M1–M5 ya es enorme; llamarlo "impacto" sería el mismo tipo de exageración que critica el proyecto.
+**Un acopio puede medir la eficiencia de su conversión, no la eficacia de la ayuda.** Es una distinción incómoda y es correcta. Pasar de cero a M1–M5 ya es enorme; llamarlo "impacto" sería exagerar.
 
 ---
 
@@ -192,7 +190,7 @@ Si el acopio A tiene aceite con precio sombra 3 y el acopio B lo tiene en 25, mo
 
 Esa es la extensión natural —un problema de transbordo— y es lo que de verdad resuelve "todos mandaron arroz a Quibdó". Pero **solo funciona si varios acopios llevan el libro mayor.**
 
-Por eso el activo defendible del proyecto no es el mapa —Gravitas ya lo tiene y lo tiene mejor— sino **el registro**. El mapa muestra dónde están los acopios; el registro es lo único que permite calcular si sirvieron, y lo único que habilita la red.
+Un mapa muestra dónde están los acopios; el registro es lo único que permite calcular si sirvieron, y lo único que habilita la red.
 
 ---
 
@@ -224,4 +222,4 @@ Resuelto con PuLP/CBC sobre el ejemplo de dos alimentos:
 | Capacidad varada | 115 días-persona |
 | Aceite para desbloquear | 4,6 kg |
 
-Los precios sombra del ejemplo hecho a mano quedan confirmados. Lo que no se había visto es que el rango de validez termina en 4,6 kg — y ese detalle es el que evita que el motor de petición cause el problema que intenta resolver.
+Los precios sombra quedan confirmados, y el rango de validez termina en 4,6 kg — el detalle que evita que el motor de petición cause el problema que intenta resolver.

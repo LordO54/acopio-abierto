@@ -14,7 +14,7 @@ Tres hallazgos, en orden de importancia:
 
 2. **La serie pública se corta en diciembre de 2024.** No hay dato abierto de emergencias para 2025 ni 2026 — incluido el sismo del 10 de agosto.
 
-3. **Corrijo una afirmación previa:** sí es posible calcular tiempo de ciclo, parcialmente, con datos hoy públicos. El dataset 2023–2024 trae fechas de activación y de aprobación.
+3. **Sí es posible calcular el tiempo de ciclo, aunque de forma marginal.** El dataset 2023–2024 trae fechas de activación y de aprobación, pero solo están diligenciadas en el 0,27% de los registros.
 
 ---
 
@@ -62,7 +62,7 @@ Portal moderno y bien construido: accesibilidad WCAG 2.1 AA declarada, control d
 
 Las categorías disponibles son **Amenaza, Institucional, NATECH y Riesgo**. No existe categoría de manejo de desastres. **Ninguno de los nueve datasets se refiere a emergencias, respuesta, ayuda humanitaria o donaciones.** El catálogo de datos abiertos del SNIGRD nuevo es íntegramente de conocimiento y reducción del riesgo.
 
-> **Hallazgo lateral valioso:** *Riesgos Comunitarios 2024–2025* contiene 21.412 puntos georreferenciados de equipamientos (hospitales, escuelas, viviendas) con los tipos de amenaza a los que está expuesto cada uno, levantados en procesos de **mapeo comunitario**. Es lo más cercano que existe hoy a un inventario de vulnerabilidad a escala comunitaria, y encaja directamente con la capa 3 de tu proyecto. Descargable en GeoJSON, EPSG:4326, con diccionario de columnas publicado.
+> **Hallazgo lateral:** *Riesgos Comunitarios 2024–2025* contiene 21.412 puntos georreferenciados de equipamientos (hospitales, escuelas, viviendas) con los tipos de amenaza a los que está expuesto cada uno, levantados en procesos de **mapeo comunitario**. Es lo más cercano que existe hoy a un inventario de vulnerabilidad a escala comunitaria. Descargable en GeoJSON, EPSG:4326, con diccionario de columnas publicado.
 
 ### Portal BI — dónde está el sesgo, con evidencia
 
@@ -76,7 +76,7 @@ Tableros publicados, por proceso de la Ley 1523:
 
 **Este es el hallazgo más importante de toda la auditoría.**
 
-El tablero de *Agua potable y saneamiento* hace exactamente lo que el proyecto quiere hacer: filtro por vigencia, 21 departamentos, **409 asignaciones de carrotanques**, 840 tanques de almacenamiento, **441.613.266 litros por orden de proveeduría** y 94.488.132 litros por préstamo, todo mapeado territorialmente. Lo mismo existe para maquinaria amarilla.
+El tablero de *Agua potable y saneamiento* hace trazabilidad logística completa: filtro por vigencia, 21 departamentos, **409 asignaciones de carrotanques**, 840 tanques de almacenamiento, **441.613.266 litros por orden de proveeduría** y 94.488.132 litros por préstamo, todo mapeado territorialmente. Lo mismo existe para maquinaria amarilla.
 
 Es decir: **la UNGRD sabe hacer trazabilidad logística, la tiene construida y la publica — pero solo para agua, saneamiento y maquinaria.** No existe un tablero equivalente para asistencia humanitaria alimentaria y no alimentaria: kits, colchonetas, frazadas, carpas. Justamente el flujo donde vive el problema de la segunda ola.
 
@@ -114,7 +114,7 @@ Ambos datasets incluyen, **por evento y por municipio**, columnas para la ayuda 
 
 `kits de alimento` · `kits de aseo` · `kits de cocina` · `colchonetas` · `frazadas` · `carpas` · `hamacas` · `toldillos` · `juegos de sábanas` · `raciones de campaña` · `agua en galones` · `banco de materiales` · `maquinaria` · `subsidios de arriendo` · `transferencias económicas` — cada uno con su cantidad y su valor.
 
-**Es exactamente lo que le pedimos a la UNGRD en el numeral 1 del derecho de petición. Ya es público. Y está vacío.**
+**Es exactamente lo que solicita el numeral 1 del derecho de petición dirigido a la UNGRD. Ya es público. Y está vacío.**
 
 ### Completitud medida
 
@@ -130,7 +130,7 @@ Volúmenes concentrados en esos pocos registros: **777.452 kits de alimento** en
 
 ### Lo que esto significa
 
-Solo hay dos explicaciones posibles, y ambas sirven al proyecto:
+Solo hay dos explicaciones posibles:
 
 - **Si sí se entregó ayuda y no se registró** → el sistema de información no refleja la operación. La trazabilidad de la que habla la Contraloría no existe en el dato público.
 - **Si efectivamente no se entregó ayuda en el 98% de las emergencias** → la cobertura de la respuesta es mucho menor de lo que se comunica.
@@ -139,9 +139,7 @@ Esta es la pregunta que hay que hacerle a la UNGRD, y **se contesta sola en cual
 
 ---
 
-## 4. Corrección a lo que te dije antes
-
-Afirmé que no era posible calcular tiempo de ciclo con datos públicos. **Es parcialmente falso.**
+## 4. El tiempo de ciclo sí es calculable, pero solo en el 0,27% de los registros
 
 El dataset 2023–2024 incluye:
 
@@ -150,17 +148,11 @@ El dataset 2023–2024 incluye:
 - `fecha_aprobacion_materiales`
 - `fecha_aprobacion_maquinaria`
 
-> ### ⚠️ CORRECCIÓN — 27 de agosto de 2026
->
-> Afirmé aquí que `fecha_activacion` estaba poblada en **10.613 registros (66%)**. **Es falso.** Filtré por el centinela `'No Registra'` sin advertir que el campo usa **dos grafías** para el mismo valor: `No registra` (10.561) y `No Registra` (5.423). Total de centinelas: **15.984 de 16.036**.
->
-> El campo tiene fecha real en **52 registros (0,32%)**. De esos, 2 traen rangos en vez de fechas y 6 tienen activación anterior al evento. **Latencias calculables: 44 — el 0,27% del dataset.**
->
-> El indicador sí se puede construir, pero no mide el desempeño del sistema: documenta que el sistema no se puede medir. Ver `06-indicador-latencia-y-calidad-datos.md`.
+El campo `fecha_activacion` utiliza **dos grafías distintas del mismo valor centinela** —`No registra` (10.561) y `No Registra` (5.423)—, que suman **15.984 de 16.036 registros**. Solo **52 registros (0,32%)** traen una fecha real; de esos, 2 contienen rangos en lugar de fechas y 6 registran una activación anterior al evento. **Latencias calculables: 44 — el 0,27% del dataset.**
 
-El cálculo está hecho y nadie lo había publicado. El resultado —mediana de 14 días, media de 41, máximo de 293, sobre 44 casos— **no es una estadística de desempeño sino una prueba de la ausencia de datos**, y como tal es el argumento de necesidad del proyecto.
+El indicador se puede construir, pero no mide el desempeño del sistema: documenta que el sistema no se puede medir. El resultado —mediana de 14 días, media de 41, máximo de 293, sobre 44 casos— **no es una estadística de desempeño sino una prueba de la ausencia de datos**. El cálculo completo está en `04-indicador-latencia.md`.
 
-### Bonus: el campo `comentarios`
+### El campo `comentarios`
 
 El dataset 2023–2024 trae una bitácora operativa en texto libre por evento, con la secuencia completa de reportes del CDGRD/CMGRD: quién atendió, con cuántas unidades, en qué estado quedó. Es material minable con procesamiento de lenguaje natural y es, con diferencia, la fuente cualitativa más rica y menos explotada del conjunto.
 
@@ -172,7 +164,7 @@ El dataset 2023–2024 trae una bitácora operativa en texto libre por evento, c
 |---|---|---|
 | **RUD** | `rud.gestiondelriesgo.gov.co` | **Vivo.** Pie de página 2025. Módulos: Reportes · Consultas · Manuales y Formatos · Resoluciones y Circulares · Subsidios de Arriendo · Normativa RAMV · Ver Mapa. El contenido sustantivo exige sesión |
 | Consolidados 1998–2017 | SNIGRD legado | En línea, archivos Excel sueltos |
-| Geoportal / Tablero de alertas | `190.60.210.210:8080` | Sin respuesta útil — requiere verificación con navegador |
+| Geoportal / Tablero de alertas | `190.60.210.210:8080` | Sin respuesta útil — pendiente de verificación |
 | Visores geográficos | `190.60.233.206` y ArcGIS Online | Sin verificar |
 | Google Crisis Map | Embebido en el SNIGRD legado | **Servicio descontinuado por Google.** Enlace muerto |
 
@@ -182,7 +174,7 @@ El dataset 2023–2024 trae una bitácora operativa en texto libre por evento, c
 
 ### Modificar el numeral 1 de la petición a la UNGRD
 
-La redacción actual pide inventarios de AHE 2010–2026. Parte de eso ya es público y entregarlo no cuesta nada. Reemplázalo por algo que no puedan responder con un enlace:
+La redacción actual pide inventarios de AHE 2010–2026. Parte de eso ya es público y entregarlo no cuesta nada. Conviene reemplazarla por una formulación que no se pueda responder con un enlace:
 
 > **1. Inventarios de ayuda humanitaria de emergencia.**
 > a. Relación de bienes de asistencia humanitaria entregados entre el 1 de enero de **2025** y la fecha, desagregada por municipio, fecha, tipo de bien y cantidad, en formato reutilizable. Se advierte que los conjuntos de datos `wwkg-r6te` y `rgre-6ak4` publicados en datos.gov.co únicamente cubren hasta diciembre de 2024.
@@ -214,9 +206,8 @@ La redacción actual pide inventarios de AHE 2010–2026. Parte de eso ya es pú
 
 1. **Descargar los dos datasets completos** (25.857 + 16.036 registros) y armonizarlos. Un día de trabajo.
 2. **Calcular la latencia evento → activación** para 2023–2024 y mapearla por municipio. Es el primer indicador de desempeño logístico publicado en Colombia.
-3. **Cuantificar el vacío de registro** por departamento y por tipo de evento. Ese es el gráfico que abre conversaciones.
+3. **Cuantificar el vacío de registro** por departamento y por tipo de evento.
 4. **Ajustar y radicar la petición a la UNGRD** con los numerales corregidos.
-5. Auditar el SNIGRD nuevo cuando haya navegador disponible.
 
 Los pasos 1 a 3 no dependen de nadie y producen material publicable antes de que venzan los términos de las peticiones.
 
@@ -229,5 +220,5 @@ Los pasos 1 a 3 no dependen de nadie y producen material publicable antes de que
 - Emergencias UNGRD 2023–2024 — datos.gov.co, `rgre-6ak4` · API: `https://www.datos.gov.co/resource/rgre-6ak4.json`
 - [SNIGRD legado — UNGRD](https://www.gestiondelriesgo.gov.co/snigrd/)
 - [Consolidado Anual de Emergencias 1998–2017](https://www.gestiondelriesgo.gov.co/snigrd/pagina.aspx?id=376)
-- [SNIGRD nuevo](https://sni.gestiondelriesgo.gov.co/) — no auditable sin navegador
+- [SNIGRD nuevo](https://sni.gestiondelriesgo.gov.co/)
 - [Registro Único de Damnificados](http://rud.gestiondelriesgo.gov.co/)

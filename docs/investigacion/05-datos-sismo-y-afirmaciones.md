@@ -1,12 +1,12 @@
-# Qué podemos afirmar, qué datos hay del sismo, y por qué el problema no es de velocidad
+# Qué se puede afirmar, qué datos hay del sismo, y por qué el problema no es de velocidad
 
 **Fecha:** 27 de agosto de 2026
 
 ---
 
-## 1. Qué podemos afirmar hoy y qué sigue siendo premisa
+## 1. Qué se puede afirmar hoy y qué sigue siendo premisa
 
-La distinción importa: si sobreafirmas, la primera entidad que responda con un dato te desmonta el argumento entero. Separemos.
+La distinción importa: al sobreafirmar, la primera entidad que responda con un dato desmonta el argumento entero.
 
 ### Afirmable hoy, verificable por cualquiera, sin esperar a nadie
 
@@ -24,17 +24,17 @@ Estas cinco son hechos. Cualquiera puede reproducirlos contra APIs públicas en 
 - Que **no exista** un instrumento de medición de desempeño en algún manual no publicado.
 - Que el subregistro obedezca a que no se entregó ayuda y no a que no se registró.
 
-**Recomendación:** afirma lo primero con toda firmeza y formula lo segundo como pregunta abierta. La frase que aguanta cualquier escrutinio es:
+**Recomendación:** afirmar lo primero con toda firmeza y formular lo segundo como pregunta abierta. La frase que aguanta cualquier escrutinio es:
 
-> *"No existe información pública que permita evaluar el desempeño logístico de la respuesta humanitaria en Colombia. Radicamos derechos de petición para establecer si existe información no publicada, y este documento se actualizará con las respuestas."*
+> *"No existe información pública que permita evaluar el desempeño logístico de la respuesta humanitaria en Colombia. Se radicaron derechos de petición para establecer si existe información no publicada, y este documento se actualizará con las respuestas."*
 
-Esa formulación es más fuerte, no más débil: le pone un plazo a la contraparte y convierte cualquier respuesta —incluido el silencio— en evidencia. Es exactamente para lo que sirven las peticiones ya radicadas.
+Esa formulación es más fuerte, no más débil: le pone un plazo a la contraparte y convierte cualquier respuesta —incluido el silencio— en evidencia.
 
 ---
 
 ## 2. Qué datos existen realmente sobre el sismo del 10 de agosto
 
-Más de lo que esperabas. Y esto cambia el diagnóstico del proyecto.
+Más de lo que se esperaría, y eso cambia el diagnóstico.
 
 ### Evaluación de daños georreferenciada
 
@@ -56,7 +56,7 @@ Más de lo que esperabas. Y esto cambia el diagnóstico del proyecto.
 | **UNGRD** — reportes de situación | Cifras oficiales: fallecidos, heridos, viviendas destruidas y averiadas, municipios |
 | **HDX — CODs de Colombia** | Límites administrativos y población de referencia, para cruzar cualquier cosa |
 
-### Lo que NO existe, y es justamente lo tuyo
+### Lo que NO existe
 
 - Qué entró a cada centro de acopio.
 - Qué salió, hacia dónde y cuándo.
@@ -80,7 +80,7 @@ O sea que mientras los centros de acopio se llenaban de ropa usada, ya existía 
 
 ### Por eso hay que corregir la hipótesis
 
-Tu planteamiento fue: *los acopios se crearon sin plan de riesgo, entonces las donaciones se hicieron donde se creyó correcto, no con un objetivo.* Es correcto en el efecto, pero la causa es otra.
+La hipótesis de partida —*los acopios se crearon sin plan de riesgo, de modo que las donaciones se hicieron donde se creyó correcto y no con un objetivo*— es correcta en el efecto, pero la causa es otra.
 
 **El problema no es que la información no exista. Es que no llega.**
 
@@ -95,17 +95,17 @@ Hay un abismo entre dos mundos que nunca se tocan:
 | Sabe dónde está el daño | Tiene los bienes |
 | No mueve bienes | No sabe hacia dónde moverlos |
 
-**No hay tubería entre los dos.** Esa ausencia de tubería es el proyecto.
+**No hay tubería entre los dos.**
 
 ### Consecuencia para el diseño
 
-Cambia lo que hay que construir. No es un sistema de evaluación —ese existe y funciona razonablemente— ni un sistema de inventario —ese es SUMA y le pertenece a la institucionalidad—. Es **el puente**:
+Lo que falta no es un sistema de evaluación —ese existe y funciona razonablemente— ni un sistema de inventario —ese es SUMA y le pertenece a la institucionalidad—. Es **el puente entre ambos mundos**:
 
 1. Traducir la evaluación existente a una lista de necesidades en unidades que un acopio entienda (kits, litros, colchonetas), por municipio.
 2. Registrar de forma estandarizada lo que cada acopio recibe y despacha.
 3. Devolver la agregación para que se vea qué comunidad quedó sin cubrir y cuál recibió tres veces.
 
-Los pasos 1 y 3 solo son posibles si el paso 2 existe. **El paso 2 son tus hojas.** Ese es el orden correcto de construcción, y explica por qué la fase de campo importa tanto: sin adopción en el acopio, los otros dos pasos no tienen insumo.
+Los pasos 1 y 3 solo son posibles si el paso 2 existe: sin registro estandarizado en el punto de acopio, los otros dos no tienen insumo.
 
 ---
 
@@ -115,7 +115,7 @@ El modelo secuencial —evaluar, después actuar— es correcto en teoría y no 
 
 Lo que sí funciona, y está documentado en la literatura de *material convergence*, es **gestionar la demanda en el origen**: mensajería temprana que canalice el impulso hacia donación monetaria y hacia bienes específicamente solicitados, en lugar de intentar ordenar la avalancha una vez que llegó al acopio.
 
-Traducido a tu proyecto: la lista de necesidades no sirve solo para despachar bien. **Sirve, sobre todo, para decirle a la gente qué donar antes de que done.** Ese es el punto de mayor apalancamiento de todo el sistema, y es barato.
+La lista de necesidades no sirve solo para despachar bien. **Sirve, sobre todo, para decirle a la gente qué donar antes de que done.** Ese es el punto de mayor apalancamiento de todo el sistema, y es barato.
 
 ---
 

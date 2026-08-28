@@ -6,11 +6,9 @@
 
 ---
 
-## Advertencia previa — y una corrección propia
+## Advertencia metodológica sobre el campo `fecha_activacion`
 
-En el informe de auditoría anterior afirmé que el campo `fecha_activacion` estaba poblado en **10.613 registros (66%)**. **Es falso, y el error fue mío.**
-
-Filtré por el valor centinela `'No Registra'` sin advertir que el mismo campo usa **dos grafías distintas** para decir lo mismo:
+El campo usa **dos grafías distintas del mismo valor centinela**. Quien filtre por una sola de ellas —`'No Registra'`, por ejemplo— concluirá que el campo está poblado en **10.613 registros (66%)**, y estará equivocado:
 
 | Valor | Registros |
 |---|---|
@@ -21,7 +19,7 @@ Filtré por el valor centinela `'No Registra'` sin advertir que el mismo campo u
 
 El campo no está poblado en el 66% de los casos. **Está poblado en el 0,32%.**
 
-Dejo el error documentado a propósito: es exactamente el tipo de trampa que tiene este dataset, y cualquiera que lo use va a caer en ella. Que dos grafías del mismo centinela convivan en la misma columna es, por sí solo, un dato sobre el control de calidad del sistema.
+Queda documentado a propósito: es exactamente el tipo de trampa que tiene este dataset, y en ella cae cualquiera que lo use sin revisar antes la distribución de valores de la columna. Que dos grafías del mismo centinela convivan en el mismo campo es, por sí solo, un dato sobre el control de calidad del sistema.
 
 ---
 
@@ -149,15 +147,13 @@ Esto significa que el sesgo apunta hacia el **optimismo**: 14 días de mediana e
 
 ---
 
-## 4. Por qué esto es un buen resultado, no un mal resultado
+## 4. Conclusión
 
-El proyecto no salió a medir el desempeño del Estado. Salió a determinar si ese desempeño **se puede medir**. La respuesta es no, y ahora está cuantificada:
+La pregunta que este análisis responde no es cuál es el desempeño logístico de la respuesta, sino si ese desempeño **se puede medir** con la información disponible. La respuesta es no, y queda cuantificada:
 
 > De 16.036 emergencias registradas por la UNGRD entre 2023 y 2024, es posible calcular el tiempo de respuesta de 44 —el 0,27%—, y de esas, el 12% arroja resultados temporalmente imposibles.
 
-Esa frase es citable, verificable por cualquiera contra la API pública, y no existía antes. Es el argumento de necesidad del proyecto, con número.
-
-Un instrumento de registro estandarizado no es una mejora incremental sobre lo que hay. **Es la diferencia entre 0,27% y algo.**
+La afirmación es verificable por cualquiera contra la API pública. Medir la oportunidad de la respuesta humanitaria en Colombia exige, antes que cualquier otra cosa, un instrumento de registro que hoy no existe.
 
 ---
 

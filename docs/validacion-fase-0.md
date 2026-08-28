@@ -3,7 +3,7 @@
 **Actualizado:** 27 de agosto de 2026
 **Ventana:** 27 de agosto – 19 de septiembre de 2026
 
-Esta es la página a la que apunta el enlace del segundo video. Explica qué estamos probando, cómo, y en qué puede fallar.
+Esta página explica qué estamos probando, cómo, y en qué puede fallar.
 
 ---
 
