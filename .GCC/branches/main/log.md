@@ -56,7 +56,7 @@ Traza de ejecución Observación–Pensamiento–Acción.
 
 ## OTA-006 · 2026-08-27
 
-**Observación.** Los documentos de `docs/investigacion/` y las especificaciones de `docs/` conservaban marcas de su origen conversacional: segunda persona dirigida al autor ("tu proyecto", "lo que imaginas"), autocorrecciones narradas ("afirmé que…", bloque `⚠️ CORRECCIÓN`) y coletillas que interpretaban cada hallazgo en clave de justificación del proyecto ("Esa ausencia de tubería es el proyecto").
+**Observación.** Los documentos de `docs/investigacion/` y las especificaciones de `docs/` conservaban marcas de su origen conversacional: segunda persona dirigida al autor ("tu proyecto", "lo que imaginas"), autocorrecciones narradas ("afirmé que…", bloque de corrección fechada) y coletillas que interpretaban cada hallazgo en clave de justificación del proyecto ("Esa ausencia de tubería es el proyecto").
 
 **Pensamiento.** Estos documentos son la evidencia pública del repositorio y deben sostenerse ante un lector externo —una entidad que responda una petición, un evaluador, un periodista— que no conoce el plan interno. Las autocorrecciones narradas restan autoridad sin aportar el hallazgo; el hallazgo metodológico (dos grafías del centinela `fecha_activacion`) se conserva, la narración del error se elimina. El encuadre de producto vive en `README.md` y `docs/validacion-fase-0.md`, no en cada descripción.
 

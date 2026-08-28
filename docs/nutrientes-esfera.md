@@ -123,9 +123,8 @@ Ni ignorar los micronutrientes ni convertirlos en restricción dura. La salida e
 3. Se reporta junto a `D`, con semáforo. Ejemplo de salida:
 
    > **D = 1.125 días-persona**
-   > ⚠ Vitamina C: **0% del requerimiento**. Riesgo de escorbuto si la dependencia supera 4 semanas.
-   > ⚠ Vitamina A: 12%. ⚠ Yodo: 0% — usar sal yodada.
-   > ✓ Hierro: 78%. ✓ Zinc: 91%.
+   > **Cobertura insuficiente** — Vitamina C: **0% del requerimiento**, riesgo de escorbuto si la dependencia supera 4 semanas. Vitamina A: 12%. Yodo: 0%, usar sal yodada.
+   > **Cobertura suficiente** — Hierro: 78%. Zinc: 91%.
 
 **Ventajas:** no puede volver infactible el problema, no depende de datos que hoy no existen para operar, y convierte cada carencia en un pedido concreto — que es justamente lo que el motor de petición debe producir.
 

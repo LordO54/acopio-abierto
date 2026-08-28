@@ -216,8 +216,8 @@ Resuelto con PuLP/CBC sobre el ejemplo de dos alimentos:
 | Uso de inventario | arroz 100% · aceite 100% |
 | Dual de grasa | 0,025 raciones/g = **25 raciones/kg de aceite** |
 | Dual de energía | 0 (restricción no activa) |
-| +1 kg de aceite | D = 90,0 → **+25,0** ✓ |
-| +1 kg de arroz | D = 65,15 → **+0,15** ✓ |
+| +1 kg de aceite | D = 90,0 → **+25,0**, coincide |
+| +1 kg de arroz | D = 65,15 → **+0,15**, coincide |
 | Techo por energía | 180 raciones |
 | Capacidad varada | 115 días-persona |
 | Aceite para desbloquear | 4,6 kg |

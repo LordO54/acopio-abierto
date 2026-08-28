@@ -272,11 +272,11 @@ Comprobaciones:
 |---|---|
 | `D*` | 1.125,4 |
 | Única restricción nutricional activa | grasa, `y = 0,028902` |
-| `λ_aceite` = `1,0 × y_grasa` | 0,028902 /g = **28,90 /kg** ✓ |
-| `λ_leche` = `0,27 × y_grasa` | 0,007803 /g = **7,80 /kg** ✓ |
-| `λ_arroz` = `0,006 y − μ_arroz` | 0,000173 − 0,000173 = **0** ✓ |
-| `λ_pasta` = `0,015 y − μ_pasta` | 0,000434 − 0,000434 = **0** ✓ |
-| +1 kg aceite (perturbación directa) | +28,90 raciones ✓ |
-| +500 kg arroz | +0,0 raciones ✓ |
+| `λ_aceite` = `1,0 × y_grasa` | 0,028902 /g = **28,90 /kg**, coincide |
+| `λ_leche` = `0,27 × y_grasa` | 0,007803 /g = **7,80 /kg**, coincide |
+| `λ_arroz` = `0,006 y − μ_arroz` | 0,000173 − 0,000173 = **0**, coincide |
+| `λ_pasta` = `0,015 y − μ_pasta` | 0,000434 − 0,000434 = **0**, coincide |
+| +1 kg aceite (perturbación directa) | +28,90 raciones, coincide |
+| +500 kg arroz | +0,0 raciones, coincide |
 
 Los precios sombra calculados por dualidad coinciden con la perturbación directa del inventario en todos los casos.

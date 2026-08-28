@@ -61,9 +61,9 @@ Es donde está el valor grande y **requiere que varios acopios lleven el libro m
 ## Dependencias duras
 
 ```
-F0.8 entrevistas ──► F1.3 calibrar a_i ──► F1.4 motor ──► F2.1 piloto ──► F3.1 red
-F1.1 tabla ICBF  ──► F1.4 motor
-F1.2 libro mayor ──► F2.1 piloto
+F0.8 entrevistas --> F1.3 calibrar a_i --> F1.4 motor --> F2.1 piloto --> F3.1 red
+F1.1 tabla ICBF  --> F1.4 motor
+F1.2 libro mayor --> F2.1 piloto
 ```
 
 ## Protocolo de ramas
