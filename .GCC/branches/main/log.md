@@ -61,3 +61,13 @@ Traza de ejecución Observación–Pensamiento–Acción.
 **Pensamiento.** Estos documentos son la evidencia pública del repositorio y deben sostenerse ante un lector externo —una entidad que responda una petición, un evaluador, un periodista— que no conoce el plan interno. Las autocorrecciones narradas restan autoridad sin aportar el hallazgo; el hallazgo metodológico (dos grafías del centinela `fecha_activacion`) se conserva, la narración del error se elimina. El encuadre de producto vive en `README.md` y `docs/validacion-fase-0.md`, no en cada descripción.
 
 **Acción.** Reescritura de los seis documentos de investigación y de `metricas-de-rendimiento.md` y `modelo-ensamblaje-alimentario.md` a registro impersonal. Corregida la referencia rota a `06-indicador-latencia-y-calidad-datos.md` → `04-indicador-latencia.md` y eliminado el paso obsoleto "auditar el SNIGRD cuando haya navegador", ya ejecutado en la sección 1b. Las peticiones, `README.md` y `ROADMAP.md` se dejan intactas: su primera persona es la del peticionario y la del equipo, no un residuo.
+
+---
+
+## OTA-007 · 2026-08-27
+
+**Observación.** Nuevo documento de alcance nutricional en `docs/`, guardado con nombre corto 8.3 (`NUTRIE~1.MD`) y con las mismas marcas conversacionales que se limpiaron en OTA-006: primera persona plural del equipo y remates que justifican el proyecto dentro de las descripciones.
+
+**Pensamiento.** El documento declara un límite clínico del modelo —una canasta de secos puede marcar 100% de macronutrientes y producir escorbuto a las seis semanas—. Ese contenido debe leerse como advertencia técnica verificable, no como argumento a favor del proyecto, porque su valor está justamente en que acota lo que el modelo promete. El nombre 8.3 además rompe la convención de `docs/`.
+
+**Acción.** Renombrado a `docs/nutrientes-esfera.md` y filtrado al mismo registro impersonal. Verificado que las cuatro tareas que deriva (F1.1b, F1.8, F1.9, F0.13) ya existen en `feature_list.json`. Queda sin incorporar `instrumentos/HOJA-T~2.PDF`, también con nombre 8.3.
